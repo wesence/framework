@@ -1,11 +1,13 @@
 {
   "name": "@wesence/framework",
   "version": "0.1.0",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "dev:start": "node --loader ts-node/esm --experimental-specifier-resolution=node --experimental-top-level-await --no-warnings example/graphql.ts",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "prepare": "npm run build"
   },
   "dependencies": {
     "@koa/cors": "^3.1.0",
@@ -31,7 +33,7 @@
     "@types/graphql": "^14.5.0",
     "@types/graphql-upload": "^8.0.4",
     "@types/koa-compress": "^4.0.0",
-    "@types/koa-helmet": "^5.2.0",
+    "@types/koa-helmet": "^6.0.0",
     "@types/koa-static": "^4.0.1",
     "@types/koa__cors": "^3.0.2",
     "@types/lodash": "^4.14.162",
