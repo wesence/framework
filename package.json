@@ -1,0 +1,69 @@
+{
+  "name": "@wesence/framework",
+  "version": "0.1.0",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev:start": "node --loader ts-node/esm --experimental-specifier-resolution=node --experimental-top-level-await --no-warnings example/graphql.ts",
+    "dev": "nodemon"
+  },
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "apollo-server-koa": "^2.18.2",
+    "chance": "^1.1.7",
+    "class-validator": "^0.12.2",
+    "graphql": "^15.3.0",
+    "graphql-type-json": "^0.3.2",
+    "graphql-upload": "^11.0.0",
+    "helmet": "^4.1.1",
+    "koa": "^2.13.0",
+    "koa-compress": "^5.0.1",
+    "koa-helmet": "^6.0.0",
+    "koa-static": "^5.0.0",
+    "lodash": "^4.17.20",
+    "mongoose": "^5.10.9",
+    "type-graphql": "^1.1.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@types/chance": "^1.1.0",
+    "@types/graphql": "^14.5.0",
+    "@types/graphql-upload": "^8.0.4",
+    "@types/koa-compress": "^4.0.0",
+    "@types/koa-helmet": "^5.2.0",
+    "@types/koa-static": "^4.0.1",
+    "@types/koa__cors": "^3.0.2",
+    "@types/lodash": "^4.14.162",
+    "@types/mongoose": "^5.7.36",
+    "@types/node": "^14.11.10",
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
+    "babel-eslint": "^10.1.0",
+    "dotenv": "^8.2.0",
+    "dotenv-expand": "^5.1.0",
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-formatter-pretty": "^4.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "markdownlint-cli": "^0.24.0",
+    "nodemon": "^2.0.5",
+    "prettier": "^2.1.2",
+    "reflect-metadata": "^0.1.13",
+    "shell-quote": "^1.7.2",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      ".git",
+      "node_modules"
+    ],
+    "exec": "npm run dev:start",
+    "ext": "ts,graphql"
+  }
+}
