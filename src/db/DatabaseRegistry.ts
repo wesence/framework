@@ -1,16 +1,16 @@
 import Registry from '../utils/Registry';
-import Database from './Database';
+import Mongo from './Mongo';
 
 export default class DatabaseRegistry extends Registry {
   constructor() {
     super('Database');
   }
 
-  get default() {
+  get default(): Mongo {
     return super.getItem('default');
   }
 
-  register(key: string, value: Database) {
+  register(key: string, value: Mongo) {
     super.registerItem(key, value);
 
     if (this.count() === 1) {
@@ -18,11 +18,11 @@ export default class DatabaseRegistry extends Registry {
     }
   }
 
-  get(key: string): Database {
+  get(key: string): Mongo {
     return super.getItem(key);
   }
 
-  setDefault(keyOrValue: string | Database) {
+  setDefault(keyOrValue: string | Mongo) {
     if (typeof keyOrValue === 'string') {
       super.registerItem('default', this.get(keyOrValue));
       return;
