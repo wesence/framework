@@ -66,10 +66,11 @@ export class App {
     return this.app;
   }
 
-  async initializeGraphQL(schemaOptions: BuildSchemaOptions): Promise<void> {
+  async initializeGraphQL(schemaOptions: BuildSchemaOptions, apolloConfig?: Config): Promise<void> {
     const { typeDefs, resolvers } = await buildTypeDefsAndResolvers(schemaOptions);
 
     const finalOptions: Config = {
+      ...apolloConfig,
       typeDefs,
       resolvers,
       playground: true,
