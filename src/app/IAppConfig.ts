@@ -13,10 +13,12 @@ export default interface IAppConfig extends IMiddlewareConfig {
   aws?: {
     accessKeyId?: string;
     secretAccessKey?: string;
+    region?: string;
     s3?: {
       accessKeyId: string;
       secretAccessKey: string;
       bucket: string;
+      region?: string;
     };
   };
 }
