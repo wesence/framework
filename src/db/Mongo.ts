@@ -11,6 +11,8 @@ const DEFAULT_OPTIONS = {
 
 const DEFAULT_URL = `mongodb://localhost:27017/${process.env.npm_package_name}`;
 
+mongoose.plugin(transformerPlugin);
+
 export default class Mongo extends Database {
   protected instance: Connection;
 
@@ -23,7 +25,6 @@ export default class Mongo extends Database {
       ...DEFAULT_OPTIONS,
       ...options,
     });
-    mongoose.plugin(transformerPlugin);
     return this.instance;
   }
 
