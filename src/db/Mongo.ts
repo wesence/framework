@@ -1,6 +1,7 @@
 import mongoose, { Connection, Document, Model, Schema } from 'mongoose';
 import Database from './Database';
 import { models } from '../models';
+import transformerPlugin from './plugins/mongo/transformer';
 
 const DEFAULT_OPTIONS = {
   useNewUrlParser: true,
@@ -22,6 +23,7 @@ export default class Mongo extends Database {
       ...DEFAULT_OPTIONS,
       ...options,
     });
+    mongoose.plugin(transformerPlugin);
     return this.instance;
   }
 
