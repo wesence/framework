@@ -5,7 +5,7 @@ import transformerPlugin from './plugins/mongo/transformer';
 
 const DEFAULT_OPTIONS = {
   useNewUrlParser: true,
-  useUnifiedTopology: true,
+  // useUnifiedTopology: true,
   useCreateIndex: true,
 };
 
