@@ -54,7 +54,7 @@
     "nodemon": "^2.0.5",
     "prettier": "^2.1.2",
     "reflect-metadata": "^0.1.13",
-    "shell-quote": "^1.7.2",
+    "shell-quote": "^1.7.3",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.3"
   },
